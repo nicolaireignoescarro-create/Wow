@@ -11,7 +11,10 @@
 import java.awt.Color;
 import java.awt.Cursor;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.border.Border;
+import loginandsignup.LoginAndSignUp;
 
 public class DoctorProfileDashBoard extends javax.swing.JFrame {
     
@@ -141,7 +144,6 @@ public class DoctorProfileDashBoard extends javax.swing.JFrame {
 
         jLabel3.setText("Search:");
 
-        jTextField1.setForeground(java.awt.Color.gray);
         jTextField1.setText("Enter search");
         jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -611,25 +613,20 @@ public class DoctorProfileDashBoard extends javax.swing.JFrame {
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
-                        .addComponent(jButton7)
-                        .addGap(76, 76, 76)
-                        .addComponent(jButton8)
-                        .addGap(75, 75, 75)
-                        .addComponent(jButton9))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addGap(119, 119, 119)
+                .addComponent(jButton7)
+                .addGap(76, 76, 76)
+                .addComponent(jButton8)
+                .addGap(75, 75, 75)
+                .addComponent(jButton9)
+                .addContainerGap(152, Short.MAX_VALUE))
+            .addComponent(jScrollPane5)
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
+                .addGap(8, 8, 8)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7)
                     .addComponent(jButton8)
@@ -743,12 +740,10 @@ public class DoctorProfileDashBoard extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        jButton1.setText("View All");
-jButton1.setFocusPainted(false);
-jButton1.setBackground(new Color(245, 245, 245));
-jButton1.setForeground(new Color(60, 60, 60));
-jButton1.setBorder(DoctorProfileDashBoard.createLineBorder(new Color(220,220,220)));
-jButton1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        new VitalsViewAll().setVisible(true);
+        
+        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -803,8 +798,7 @@ jButton1.setCursor(new Cursor(Cursor.HAND_CURSOR));
        this.dispose();  
 
     // Open login form
-    DoctorProfileDashBoard login = new DoctorProfileDashBoard();
-    login.setVisible(true);
+    new LoginAndSignUp().setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
